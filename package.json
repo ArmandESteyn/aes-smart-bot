@@ -1,0 +1,23 @@
+{
+  "name": "aes-smart-bot",
+  "version": "1.0.0",
+  "description": "A Simple Bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArmandESteyn/aes-smart-bot.git"
+  },
+  "author": "Armand Estevan Steyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArmandESteyn/aes-smart-bot/issues"
+  },
+  "homepage": "https://github.com/ArmandESteyn/aes-smart-bot#readme",
+  "dependencies": {
+    "botbuilder": "^3.5.4",
+    "restify": "^4.3.0"
+  }
+}
