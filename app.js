@@ -40,7 +40,7 @@ bot.dialog('/', [
 
         var reply = 
         new builder.Message()
-        .addAttachment({contentType: 'image/gif', contentUrl: "./davie.gif" });
+        .addAttachment({contentType: 'image/gif', contentUrl: "https://raw.githubusercontent.com/ArmandESteyn/aes-smart-bot/master/davie.gif" });
          session.send(reply);
 
         //session.send('Hello %(name)s! I love %(company)s!', session.userData.profile);
