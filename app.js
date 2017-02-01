@@ -31,5 +31,16 @@ bot.dialog('/',intents);
             session.send("What are you even saying ?????")
         }
     ])
+    .matches('dawiefail'[
+        function(session)
+        {
+            var reply = 
+        new builder.Message()
+        .addAttachment({contentType: 'image/gif', contentUrl: "https://raw.githubusercontent.com/ArmandESteyn/aes-smart-bot/master/davie.gif" });
+         session.send("Oh I remember dawie look at this haha");
+         session.send(reply);
+        }
+
+    ])
     
 
