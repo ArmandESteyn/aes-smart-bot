@@ -62,7 +62,7 @@ bot.dialog('/',intents);
       
        function(session)
        {
-            request('www.google.co.za', function(error, response, body)
+            request('https://salute.fivefriday.com/fivefriday/dashboard', function(error, response, body)
             {
                 if(!error)
                 {
