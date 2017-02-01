@@ -62,8 +62,18 @@ bot.dialog('/',intents);
       
        function(session)
        {
-            request('https://www.youtube.com/watch?v=0AeG2vIDki4');
-            session.send("Yo");
+            request('', function(error, response, body)
+            {
+                if(!error && response.statusCode == 200)
+                {
+                    session.send("Playing.....");
+                }
+                else
+                {
+                    session.send("Oops something went wrong");
+                }
+            });
+            session.send("I got your back jack");
        }
     ])
 
