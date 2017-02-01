@@ -53,7 +53,7 @@ bot.dialog('/',intents);
 
         function(send)
         {
-            session.send("https://salute.fivefriday.com/fivefriday/dashboard");
+            session.send("I can give you a link    https://salute.fivefriday.com/fivefriday/dashboard");
         }
 
     ])
