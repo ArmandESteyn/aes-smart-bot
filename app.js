@@ -43,7 +43,8 @@ bot.dialog('/', [
          var reply = 
         new builder.Message()
         .addAttachment({contentType: 'image/gif', contentUrl: "https://raw.githubusercontent.com/ArmandESteyn/aes-smart-bot/master/davie.gif" });
-         session.send('Hello %(name)s! I love %(company)s!. Look at this guy lol! '+ reply, session.userData.profile);
+         session.send('Hello %(name)s! I love %(company)s!. Look at this guy lol! ', session.userData.profile);
+         session.send(reply);
     }
 ]);
 
