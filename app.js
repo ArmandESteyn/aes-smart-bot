@@ -44,9 +44,9 @@ bot.dialog('/',intents);
 
     ])
     .matches('Howareyou',[
-        function(sesssion)
+        function(session)
         {
-            session.send("Im doing good what about you?")
+            session.send("Everything is fine here. How about you?");
         }
     ])
     
