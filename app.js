@@ -1,6 +1,4 @@
 
-
-
 /*
 This code sample demonstrates a more complex dialog. It uses session.userData and session.dialogData to store 
 conversation state and uses beginDialog and endDialogWithResult to manipulate the conversation stack. Step 
@@ -13,6 +11,12 @@ var builder = require('botbuilder');
 //=========================================================
 // Bot Setup
 //=========================================================
+
+//Setup a connection to LUIS
+var model = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/027ad2eb-64d6-45be-9818-9af0054c4e3f?subscription-key=e401b3bb9f4043d7b36982e6ab880664&q=hello&verbose=true';
+var recognizer = new builder.LuisRecognizer(model);
+var dialog = new builder.IntentDialog({recognizers:[recognizer]});
+
 
 // Setup Restify Server
 var server = restify.createServer();
@@ -28,8 +32,29 @@ var connector = new builder.ChatConnector({
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 
+
+module.exports = dialog
+        .matches('Greeting',[
+            function(session)
+            {
+                builder.Prompts.text(session,"Hello to you I am smart-bot");
+            }
+        ])
+        .onDefault([
+            function(session)
+            {
+                builder.Prompts.text(session,"I don't know what you mean??");
+            }
+        ]);
+
+
+
+
+
+
+
 //Root dialog
-bot.dialog('/', [
+/*bot.dialog('/', [
     function (session) {
         //Get user info
         session.beginDialog('/ensureProfile', session.userData.profile);
@@ -40,7 +65,6 @@ bot.dialog('/', [
         session.send('Hello %(name)s! I love %(company)s!', session.userData.profile);
     }
 ]);
-
 bot.dialog('/ensureProfile', [
     function (session, args, next) {
         session.dialogData.profile = args || {};
@@ -72,6 +96,7 @@ bot.dialog('/ensureProfile', [
 ]);
 
 
+*/
 
 
 
