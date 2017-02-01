@@ -59,13 +59,11 @@ bot.dialog('/',intents);
 
     ])
    .matches('shots',[
-       request('',
-       function(error, response, body, session)
+      
+       function(session)
        {
             session.send("Yo");
-       })
-
-        
+       }
     ])
 
     
