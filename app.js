@@ -36,7 +36,15 @@ bot.dialog('/', [
     function (session, results) {
         //We've gotten the user's information and can now give a response based on that data
         session.userData.profile = results.response;
-        session.send('Hello %(name)s! I love %(company)s!', session.userData.profile);
+
+
+        var reply = 
+    new builder.Message()
+        .setText(session, text)
+        .addAttachment({ fallbackText: text, contentType: 'image/gif', contentUrl: dawie });
+         session.send(reply);
+
+        //session.send('Hello %(name)s! I love %(company)s!', session.userData.profile);
     }
 ]);
 bot.dialog('/ensureProfile', [
