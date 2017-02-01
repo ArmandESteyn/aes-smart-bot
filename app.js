@@ -31,7 +31,7 @@ bot.dialog('/',intents);
             session.send("What are you even saying ?????")
         }
     ])
-    .matches('dawiefail'[
+    .matches('Dawie'[
         function(session)
         {
             var reply = 
