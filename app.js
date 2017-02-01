@@ -31,6 +31,7 @@ var connector = new builder.ChatConnector({
 });
 var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
+bot.dialog('/', dialog);
 
 
 module.exports = dialog
