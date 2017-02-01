@@ -38,12 +38,10 @@ bot.dialog('/', [
         //We've gotten the user's information and can now give a response based on that data
         session.userData.profile = results.response;
         
-       
-
          var reply = 
         new builder.Message()
         .addAttachment({contentType: 'image/gif', contentUrl: "https://raw.githubusercontent.com/ArmandESteyn/aes-smart-bot/master/davie.gif" });
-         session.send('Hello %(name)s! I love %(company)s!', session.userData.profile+" Look at this guy lol"+ reply);
+         session.send(reply);
     }
 ]);
 
