@@ -51,7 +51,7 @@ bot.dialog('/',intents);
     ])
     .matches('opensalute',[
 
-        function(send)
+        function(session)
         {
             session.send("I can give you a link    https://salute.fivefriday.com/fivefriday/dashboard");
         }
