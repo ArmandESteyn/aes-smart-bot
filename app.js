@@ -21,9 +21,12 @@ var recognizer = new builder.LuisRecognizer(model);
 var dialog = new builder.IntentDialog({ recognizers: [recognizer] });
 
 
-bot.dialog('/', [
+bot.dialog('/', dialog);
+
+dialog.matches('Greeting',[
     function(session)
     {
-        builder.Prompts.text(session,"HELLOP");
+        builder.Prompts.text(session,"Wazzzzzzzzzzup bro");
     }
-]);
+])
+ 
