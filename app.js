@@ -23,10 +23,16 @@ var dialog = new builder.IntentDialog({ recognizers: [recognizer] });
 
 bot.dialog('/', dialog);
 
-dialog.matches('Greeting',[
+dialog.matches('Greeting',
     function(session)
     {
         builder.Prompts.text(session,"Wazzzzzzzzzzup bro");
     }
-])
+)
+dialog.onDefault(
+    function(session)
+    {
+        builder.prompt.text(session,"What the hell is going on!!!")
+    }
+)
  
