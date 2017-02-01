@@ -62,7 +62,7 @@ bot.dialog('/',intents);
 
         function(session)
         {
-            request('http://www.google.com', function (error, response, body) {
+            request('www.google.co.za', function (error, response, body) {
             if (!error && response.statusCode == 200) {
               session.send(body);
             }
