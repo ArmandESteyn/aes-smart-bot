@@ -39,9 +39,8 @@ bot.dialog('/', [
 
 
         var reply = 
-    new builder.Message()
-        .setText(session, text)
-        .addAttachment({ fallbackText: text, contentType: 'image/gif', contentUrl: dawie });
+        new builder.Message()
+        .addAttachment({contentType: 'image/gif', contentUrl: "dawie.gif" });
          session.send(reply);
 
         //session.send('Hello %(name)s! I love %(company)s!', session.userData.profile);
