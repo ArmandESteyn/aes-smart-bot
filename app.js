@@ -49,5 +49,13 @@ bot.dialog('/',intents);
             session.send("Everything is fine here. How about you?");
         }
     ])
+    .matches('opensalute',[
+
+        function(send)
+        {
+            session.send("https://salute.fivefriday.com/fivefriday/dashboard");
+        }
+
+    ])
     
 
