@@ -40,7 +40,7 @@ bot.dialog('/', [
 
         var reply = 
         new builder.Message()
-        .addAttachment({contentType: 'image/gif', contentUrl: "http://www.w3schools.com/css/trolltunga.jpg" });
+        .addAttachment({contentType: 'image/gif', contentUrl: "davie.gif" });
          session.send(reply);
 
         //session.send('Hello %(name)s! I love %(company)s!', session.userData.profile);
