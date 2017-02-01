@@ -1,12 +1,5 @@
 var builder = require('botbuilder');
-var restify = require('restify');
 
-// Setup Restify Server
-var server = restify.createServer();
-server.listen(process.env.port || process.env.PORT || 3978, function () {
-   console.log('%s listening to %s', server.name, server.url); 
-});
-  
 // Create chat bot
 var connector = new builder.ChatConnector({
     appId: 'f03bb295-c889-472e-b074-7131173c86c4',
