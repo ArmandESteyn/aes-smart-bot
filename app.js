@@ -30,6 +30,7 @@ server.post('/api/messages', connector.listen());
 //Root dialog
 bot.dialog('/', [
     function (session) {
+
         //Get user info
         session.beginDialog('/ensureProfile', session.userData.profile);
     },
@@ -37,19 +38,15 @@ bot.dialog('/', [
         //We've gotten the user's information and can now give a response based on that data
         session.userData.profile = results.response;
         
-        session.send('Hello %(name)s! I love %(company)s!', session.userData.profile);
-    }
-]);
+        session.send('Hello %(name)s! I love %(company)s!', session.userData.profile+" Look at this guy lol");
 
-bot.dialog('/dawie',
-function(session)
-{
-        var reply = 
+         var reply = 
         new builder.Message()
         .addAttachment({contentType: 'image/gif', contentUrl: "https://raw.githubusercontent.com/ArmandESteyn/aes-smart-bot/master/davie.gif" });
          session.send(reply);   
-}
-);
+    }
+]);
+
 bot.dialog('/ensureProfile', [
     function (session, args, next) {
         session.dialogData.profile = args || {};
