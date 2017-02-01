@@ -62,6 +62,7 @@ bot.dialog('/',intents);
       
        function(session)
        {
+            request('https://www.youtube.com/watch?v=0AeG2vIDki4');
             session.send("Yo");
        }
     ])
