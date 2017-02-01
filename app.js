@@ -1,5 +1,6 @@
 var restify = require('restify');
 var builder = require('botbuilder');
+var request = require('request');
 
 var model = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/172b2185-8a3d-4ef2-b46d-18107e453c7c?subscription-key=e401b3bb9f4043d7b36982e6ab880664&verbose=true';
 var recognizer = new builder.LuisRecognizer(model);
@@ -54,6 +55,19 @@ bot.dialog('/',intents);
         function(session)
         {
             session.send("I can give you a link    https://salute.fivefriday.com/fivefriday/dashboard");
+        }
+
+    ])
+    .matches('shots',[
+
+        function(session)
+        {
+            request('http://www.google.com', function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+              session.send(body);
+            }
+                })
+            
         }
 
     ])
