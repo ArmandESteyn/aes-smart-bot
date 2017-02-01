@@ -58,19 +58,15 @@ bot.dialog('/',intents);
         }
 
     ])
-    .matches('shots',[
+   .matches('shots',[
+       request('',
+       function(error, response, body, session)
+       {
+            session.send("Yo");
+       })
 
-        function(session)
-        {
-            request('www.google.co.za', function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-              session.send("Done");
-              console.log(body);
-            }
-                })
-            
-        }
-
+        
     ])
+
     
 
