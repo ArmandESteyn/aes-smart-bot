@@ -19,7 +19,8 @@ var bot = new builder.UniversalBot(connector);
 server.post('/api/messages', connector.listen());
 bot.dialog('/',intents);
 
-    intents.matches('Greeting',[
+    intents
+    .matches('Greeting',[
         function(session)
         {
             session.send("Hello there");
@@ -45,8 +46,8 @@ bot.dialog('/',intents);
     .matches('Howareyou',[
         function(sesssion)
         {
-            session.send("Im doing good what about you?");
+            session.send("Im doing good what about you?")
         }
-    ]);
+    ])
     
 
