@@ -42,5 +42,11 @@ bot.dialog('/',intents);
         }
 
     ])
+    .matches('Howareyou',[
+        function(sesssion)
+        {
+            session.send('Im doing good what about you?');
+        }
+    ])
     
 
