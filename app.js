@@ -85,7 +85,9 @@ bot.dialog('/',intents);
                }
            }
 
+           
            request(options,callback);
+           session.send("Yo");
        }
 
     ])
