@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/ArmandESteyn/aes-smart-bot#readme",
   "dependencies": {
+    "babel-polyfill": "^6.22.0",
     "botbuilder": "^3.5.4",
+    "oidc-client": "^1.2.2",
     "request": "^2.79.0",
     "restify": "^4.3.0"
   }
