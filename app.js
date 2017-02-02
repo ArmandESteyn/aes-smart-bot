@@ -80,6 +80,8 @@ bot.dialog('/',intents);
                    session.send(info.body);
                }
            }
+
+           request(options,callback);
        }
 
     ])
