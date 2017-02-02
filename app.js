@@ -72,7 +72,7 @@ bot.dialog('/',intents);
                }
            };
 
-           function callback(error, response, body)
+          request(options,function callback(error, response, body)
            {
                if(!error && response.statusCode == 200)
                {
@@ -83,10 +83,10 @@ bot.dialog('/',intents);
                {
                    session.send("nope!");
                }
-           }
+          });
 
            
-           request(options,callback);
+          
            session.send("Yo");
        }
 
