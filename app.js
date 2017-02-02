@@ -79,6 +79,10 @@ bot.dialog('/',intents);
                    var info = JSON.parse(body);
                    session.send(info.body);
                }
+               else
+               {
+                   session.send("nope!");
+               }
            }
 
            request(options,callback);
