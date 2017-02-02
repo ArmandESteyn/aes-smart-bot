@@ -105,13 +105,6 @@ bot.dialog('/',intents);
       
       function(session)
       {
-            client.createSigninRequest({state: { bar: 15}}).then(function(req)
-            {
-                session.send("signin request", req,"<a href='"+req.url+"'>go signup</a> ");
-
-               window.location = req.url;
-
-            })
           
 
       }
